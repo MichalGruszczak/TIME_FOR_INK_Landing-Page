@@ -1,16 +1,185 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 60px;
   background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header__logo {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav .header__nav-btn {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: bold;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.header .header__nav .header__nav-btn:hover {
+  color: white;
+}
+
+.header .header__nav .header__nav-btn:active {
+  font-size: 15px;
+}
+
+.header.nontransparent {
+  background-color: red;
 }
 
 .home {
   width: 100%;
   height: 100vh;
   background-color: lightcoral;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 1fr 0.5fr 1.5fr 1fr 1.5fr;
+      grid-template-rows: 150px 1fr 0.5fr 1.5fr 1fr 1.5fr;
+      grid-template-areas: "empty" "title" "subtitle" "description" "social" "empty2";
+}
+
+.home .home__title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 110px;
+}
+
+.home .home__subtitle {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: subtitle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 44px;
+  font-weight: normal;
+}
+
+.home .home__description {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: description;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 15%;
+}
+
+.home .home__social {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: social;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home__social .home__facebook,
+.home .home__social .home__instagram {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.home .home__social .home__facebook:hover,
+.home .home__social .home__instagram:hover {
+  background-color: black;
+  color: white;
+}
+
+.home .home__social .home__facebook:active,
+.home .home__social .home__instagram:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.home .home__social .home__facebook {
+  margin-right: 10px;
+}
+
+.home .home__social .home__instagram {
+  margin-left: 10px;
 }
 
 .about {
@@ -37,7 +206,7 @@ header {
   background-color: lightpink;
 }
 
-footer {
+.footer {
   width: 100%;
   height: 50px;
   background-color: orange;
@@ -50,9 +219,21 @@ footer {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: lightblue;
   width: 100%;
   height: 500vh;
+}
+
+button {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

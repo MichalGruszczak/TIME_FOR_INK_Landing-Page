@@ -5,6 +5,7 @@
 @import "gallery";
 @import "contact";
 @import "footer";
+@import "MIXINS";
 
 * {
   margin: 0;
@@ -12,8 +13,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: lightblue;
   width: 100%;
   height: 500vh;
+}
+
+button {
+  outline: none;
 }
