@@ -260,6 +260,222 @@
   width: 100%;
   height: 100vh;
   background-color: lightpink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact__personal {
+  margin-top: 60px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact__personal .contact__picture-wrapper {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact__personal .contact__picture-wrapper .contact__img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: blue;
+}
+
+.contact .contact__personal .contact__picture-wrapper .contact__img-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.contact .contact__personal .contact__data-wrapper {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 0 20%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 50px 50px 50px 50px 1fr;
+      grid-template-rows: 1fr 50px 50px 50px 50px 1fr;
+      grid-template-areas: "." "mail" "phone" "facebook" "instagram" ".";
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container .contact__element-icon {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container .contact__element-text {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container .contact__element-text a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container.mail {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mail;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container.phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: phone;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container.facebook {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: facebook;
+}
+
+.contact .contact__personal .contact__data-wrapper .contact__element-container.instagram {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: instagram;
+}
+
+.contact .contact__form-container {
+  margin-top: 60px;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  background-color: yellowgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__form-container .contact__form {
+  width: 80%;
+  height: 80%;
+  padding: 5% 10%;
+  background-color: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact__form-container .contact__form .contact__input {
+  margin-top: 10px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  padding: 0 10px;
+}
+
+.contact .contact__form-container .contact__form .contact__input:hover {
+  border-color: darkgoldenrod;
+}
+
+.contact .contact__form-container .contact__form .contact__input:focus {
+  border-color: darkgoldenrod;
+}
+
+.contact .contact__form-container .contact__form .contact__input.textarea {
+  height: 150px;
+  padding-top: 10px;
+}
+
+.contact .contact__form-container .contact__form .contact__form-error {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+.contact .contact__form-container .contact__form .contact__form-btn {
+  margin-top: 10px;
+  height: 50px;
+  width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  font-size: 18px;
+}
+
+.contact .contact__form-container .contact__form .contact__form-btn:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.contact .contact__form-container .contact__form .contact__form-btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .footer {
@@ -289,7 +505,9 @@ body {
   height: 500vh;
 }
 
-button {
+button,
+input,
+textarea {
   outline: none;
 }
 /*# sourceMappingURL=style.css.map */
