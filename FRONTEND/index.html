@@ -86,13 +86,13 @@
       </div>
       <div class="contact__form-container">
          <form action="" class="contact__form">
-            <input placeholder='Email'  type="email" class='contact__input'>
-            <span class="contact__form-error">Error!</span>
-            <input placeholder='Tytuł' type="text" class="contact__input">
-            <span class="contact__form-error">Error!</span>
-            <textarea placeholder='Tekst wiadomości...' cols="30" rows="10" class="contact__input textarea"></textarea>
-            <span class="contact__form-error">Error!</span>
-            <button type='submit' class="contact__form-btn">Wyślij</button>
+            <input id='contact__email' placeholder='Email'  type="email" class='contact__input'>
+            <span id='contact__email-error' class="contact__form-error"></span>
+            <input id='contact__title' placeholder='Tytuł' type="text" class="contact__input">
+            <span id='contact__title-error' class="contact__form-error"></span>
+            <textarea id='contact__text' placeholder='Tekst wiadomości...' cols="30" rows="10" class="contact__input textarea"></textarea>
+            <span id='contact__text-error' class="contact__form-error"></span>
+            <input formnovalidate type="submit" value='Wyślij' class="contact__form-btn">
          </form>
       </div>
     </section>
@@ -101,5 +101,7 @@
 
     <footer class='footer'></footer>
     <script src="./index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </script>
 </body>
 </html
