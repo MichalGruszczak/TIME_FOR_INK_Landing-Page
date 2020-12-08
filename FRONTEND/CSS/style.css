@@ -8,6 +8,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 50;
 }
 
 .header .header__logo {
@@ -252,8 +253,147 @@
 
 .gallery {
   width: 100%;
-  height: 100vh;
-  background-color: lightblue;
+  min-height: 100vh;
+  height: auto;
+  background-color: lightsalmon;
+  padding: 70px 10px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery .gallery__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  height: calc(95vh - 70px);
+  background-color: gold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid white;
+}
+
+.gallery .gallery__item .gallery__item-img {
+  position: relative;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container a {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container .gallery__img {
+  max-height: 530px;
+  max-width: 100%;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f302";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container:hover img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.gallery .gallery__item .gallery__item-img .gallery__item-img-container:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.gallery .gallery__item .gallery__item-title {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .gallery__item .gallery__item-description {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
 }
 
 .contact {
@@ -449,6 +589,7 @@
   color: red;
   margin: 5px 0;
   padding-left: 10px;
+  font-size: 18px;
 }
 
 .contact .contact__form-container .contact__form .contact__form-btn {
@@ -502,7 +643,7 @@ a {
 body {
   background-color: lightblue;
   width: 100%;
-  height: 500vh;
+  height: auto;
 }
 
 button,

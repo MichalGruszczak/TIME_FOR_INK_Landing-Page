@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ART by Peggy</title>
+    <link href="./Libraries/lightbox/dist/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./Libraries/font-awesome/css/all.min.css">
     
 </head>
 <body>
@@ -54,7 +55,30 @@
 
 
     <section class="inset"></section>
-    <section class="gallery"></section>
+
+    <!-- Gallery section start -->
+    <section class="gallery">
+
+     
+      <!-- One item gallery -->
+   <div class="gallery__item">
+      <div class="gallery__item-img">
+         <div class="gallery__item-img-container">
+            <a href="./img/Paintings/Example_1/1.jpg" data-lightbox="1"> <img class='gallery__img' src="./img/Paintings/Example_1/1.jpg" alt="">
+            </a>
+         </div>
+      </div>
+      <div class="gallery__item-title"><h2>Hello World</h2></div>
+      <div class="gallery__item-description"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, molestias!</span></div>
+      <a href="./img/Paintings/Example_1/2.jpg" data-lightbox="1"></a>
+      <a href="./img/Paintings/Example_1/3.jpg" data-lightbox="1"></a>
+      <a href="./img/Paintings/Example_1/4.jpg" data-lightbox="1"></a>
+      <a href="./img/Paintings/Example_1/5.jpg" data-lightbox="1"></a>
+   </div>
+
+
+    </section>
+    <!-- Gallery section end -->
 
     <!-- Contact section start -->
     <section class="contact">
@@ -103,5 +127,6 @@
     <script src="./index.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     </script>
+    <script src="./Libraries/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html

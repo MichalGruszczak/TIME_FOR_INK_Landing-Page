@@ -8,6 +8,7 @@
   height: 60px;
   background-color: orange;
   display: flex;
+  z-index: 50;
 
   .header__logo {
     flex-basis: 50%;
