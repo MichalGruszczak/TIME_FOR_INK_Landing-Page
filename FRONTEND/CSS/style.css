@@ -248,7 +248,22 @@
 .inset {
   width: 100%;
   height: 100vh;
-  background-color: lightseagreen;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inset .inset__text {
+  color: white;
+  text-align: center;
+  font-size: 18px;
 }
 
 .gallery {
@@ -260,9 +275,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -319,7 +333,7 @@
 }
 
 .gallery .gallery__item .gallery__item-img .gallery__item-img-container .gallery__img {
-  max-height: 530px;
+  max-height: 500px;
   max-width: 100%;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -623,6 +637,19 @@
   width: 100%;
   height: 50px;
   background-color: orange;
+}
+
+.underneath {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: url("/FRONTEND/img/Layout/inset.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {

@@ -1,5 +1,12 @@
 .inset {
   width: 100%;
   height: 100vh;
-  background-color: lightseagreen;
+  background-color: transparent;
+  @include div-center;
+
+  .inset__text {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
 }

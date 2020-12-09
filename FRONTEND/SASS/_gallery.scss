@@ -5,7 +5,7 @@
   background-color: lightsalmon;
   padding: 70px 10px 0 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   .gallery__item {
@@ -37,7 +37,7 @@
         }
 
         .gallery__img {
-          max-height: 530px;
+          max-height: 500px;
           max-width: 100%;
           transition: 0.2s linear;
           box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);

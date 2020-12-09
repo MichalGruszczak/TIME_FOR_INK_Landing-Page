@@ -18,6 +18,63 @@ let contactEmailError = document.getElementById("contact__email-error");
 let contactTitleError = document.getElementById("contact__title-error");
 let contactTextError = document.getElementById("contact__text-error");
 
+////////// ********** GALLERY START ********** //////////
+
+const paintings = [
+  {
+    id: "3",
+    title: "third third",
+    description: "third third 240x320 canvas",
+    mainImg: "./img/Paintings/Example_3/1.jpg",
+    img2: "./img/Paintings/Example_3/2.jpg",
+    img3: "./img/Paintings/Example_3/3.jpg",
+    img4: "./img/Paintings/Example_3/4.jpg",
+    img5: "./img/Paintings/Example_3/5.jpg",
+  },
+  {
+    id: "2",
+    title: "second second",
+    description: "second second 240x320 canvas",
+    mainImg: "./img/Paintings/Example_2/1.jpg",
+    img2: "./img/Paintings/Example_2/2.jpg",
+    img3: "./img/Paintings/Example_2/3.jpg",
+    img4: "./img/Paintings/Example_2/4.jpg",
+    img5: "./img/Paintings/Example_2/5.jpg",
+  },
+  {
+    id: "1",
+    title: "first first",
+    description: "first first 240x320 canvas",
+    mainImg: "./img/Paintings/Example_1/1.jpg",
+    img2: "./img/Paintings/Example_1/2.jpg",
+    img3: "./img/Paintings/Example_1/3.jpg",
+    img4: "./img/Paintings/Example_1/4.jpg",
+    img5: "./img/Paintings/Example_1/5.jpg",
+  },
+];
+
+paintings.map((item) => {
+  let galleryItem = document.createElement(`div`);
+  galleryItem.classList.add("gallery__item");
+  galleryItem.innerHTML = `
+<div class="gallery__item-img">
+<div class="gallery__item-img-container">
+   <a href=${item.mainImg} data-lightbox=${item.id}> <img class='gallery__img' src=${item.mainImg} alt="">
+   </a>
+</div>
+</div>
+<div class="gallery__item-title"><h2>${item.title}</h2></div>
+<div class="gallery__item-description"><span>${item.description}</span></div>
+<a href=${item.img2} data-lightbox=${item.id}></a>
+<a href=${item.img3} data-lightbox=${item.id}></a>
+<a href=${item.img4} data-lightbox=${item.id}></a>
+<a href=${item.img5} data-lightbox=${item.id}></a>`;
+
+  gallerySection.appendChild(galleryItem);
+});
+
+////////// ********** GALLERY END ********** //////////
+
 ////////// ********** CONTACT START ********** //////////
 
 let emailValue = "";
