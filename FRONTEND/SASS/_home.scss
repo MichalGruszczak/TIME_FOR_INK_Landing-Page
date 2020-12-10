@@ -1,7 +1,11 @@
 .home {
   width: 100%;
   height: 100vh;
-  background-color: lightcoral;
+  background-image: url("../img/Layout/home1.jpg");
+  animation: homeBackground 30s infinite linear both;
+  background-position: center;
+  background-size: cover;
+  color: white;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
@@ -75,17 +79,17 @@
     .home__instagram {
       width: 100px;
       height: 100px;
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.4);
+      color: white;
       border: none;
       border-radius: 50%;
       @include div-center;
       font-size: 40px;
       cursor: pointer;
-      transition: 0.1s linear;
+      // transition: background-color 0.5s linear;
 
       &:hover {
-        background-color: black;
-        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
       }
 
       &:active {
@@ -101,7 +105,7 @@
     }
 
     .home__facebook.loaded {
-      transition: 1s ease;
+      transition: left 1s ease, background-color 0.2s linear, transform 0.1s linear;
       left: 0;
       opacity: 1;
     }
@@ -114,9 +118,35 @@
     }
 
     .home__instagram.loaded {
-      transition: 1s ease;
+      transition: right 1s ease, background-color 0.2s linear, transform 0.1s linear;
       right: 0;
       opacity: 1;
     }
+  }
+}
+
+@keyframes homeBackground {
+  0% {
+    background-image: url("../img/Layout/home1.jpg");
+  }
+
+  25% {
+    background-image: url("../img/Layout/home1.jpg");
+  }
+
+  33% {
+    background-image: url("../img/Layout/home2.jpg");
+  }
+
+  58% {
+    background-image: url("../img/Layout/home2.jpg");
+  }
+
+  66% {
+    background-image: url("../img/Layout/home3.jpg");
+  }
+
+  91% {
+    background-image: url("../img/Layout/home3.jpg");
   }
 }
