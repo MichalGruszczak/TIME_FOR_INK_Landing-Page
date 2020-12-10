@@ -66,6 +66,7 @@
   width: 100%;
   height: 100vh;
   background-color: lightcoral;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -76,6 +77,9 @@
 }
 
 .home .home__title {
+  position: relative;
+  top: -200px;
+  opacity: 0;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: title;
@@ -89,9 +93,20 @@
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 110px;
+  font-weight: bold;
+}
+
+.home .home__title.loaded {
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
+  top: 0;
+  opacity: 1;
 }
 
 .home .home__subtitle {
+  position: relative;
+  top: -300px;
+  opacity: 0;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: subtitle;
@@ -108,7 +123,17 @@
   font-weight: normal;
 }
 
+.home .home__subtitle.loaded {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  top: 0;
+  opacity: 1;
+}
+
 .home .home__description {
+  position: relative;
+  top: -400px;
+  opacity: 0;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: description;
@@ -124,6 +149,13 @@
   text-align: center;
   font-size: 18px;
   margin: 0 15%;
+}
+
+.home .home__description.loaded {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  top: 0;
+  opacity: 1;
 }
 
 .home .home__social {
@@ -177,10 +209,30 @@
 
 .home .home__social .home__facebook {
   margin-right: 10px;
+  position: relative;
+  left: -800px;
+  opacity: 0;
+}
+
+.home .home__social .home__facebook.loaded {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  left: 0;
+  opacity: 1;
 }
 
 .home .home__social .home__instagram {
   margin-left: 10px;
+  position: relative;
+  right: -800px;
+  opacity: 0;
+}
+
+.home .home__social .home__instagram.loaded {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  right: 0;
+  opacity: 1;
 }
 
 .about {
@@ -198,6 +250,7 @@
 }
 
 .about .about__card {
+  opacity: 0;
   margin-top: 60px;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
@@ -210,6 +263,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
 }
 
 .about .about__card .about__picture {
@@ -243,6 +298,12 @@
   padding-top: 15px;
   text-align: center;
   font-size: 16px;
+}
+
+.about .about__card.loaded {
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
+  opacity: 1;
 }
 
 .inset {

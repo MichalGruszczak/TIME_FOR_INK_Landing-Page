@@ -75,6 +75,30 @@ paintings.map((item) => {
 
 ////////// ********** GALLERY END ********** //////////
 
+////////// ********** HOME START ********** //////////
+
+const homeTitle = document.querySelector(".home__title");
+const homeSubtitle = document.querySelector(".home__subtitle");
+const homeDescription = document.querySelector(".home__description");
+const homeFacebook = document.querySelector(".home__facebook");
+const homeInstagram = document.querySelector(".home__instagram");
+
+window.addEventListener("load", () => {
+  homeTitle.classList.add("loaded");
+  setTimeout(() => {
+    homeSubtitle.classList.add("loaded");
+  }, 1000);
+  setTimeout(() => {
+    homeDescription.classList.add("loaded");
+  }, 2000);
+  setTimeout(() => {
+    homeFacebook.classList.add("loaded");
+    homeInstagram.classList.add("loaded");
+  }, 3000);
+});
+
+////////// ********** HOME END ********** //////////
+
 ////////// ********** CONTACT START ********** //////////
 
 let emailValue = "";
@@ -158,8 +182,7 @@ contactFormBtn.addEventListener("click", (e) => {
 // SHOW SCROLL SIZE FROM TOP
 document.addEventListener("scroll", () => {
   const scrollSize = window.pageYOffset;
-  // console.log(scrollSize);
-  if (scrollSize > 250) {
+  if (scrollSize > 100) {
     header.classList.add("nontransparent");
   } else header.classList.remove("nontransparent");
 });
@@ -186,3 +209,26 @@ contactBtn.addEventListener("click", () => {
 });
 
 ////////// ********** HEADER END ********** //////////
+
+////////// ********** ABOUT ME START ********** //////////
+
+const about1 = document.querySelector("#about1");
+const about2 = document.querySelector("#about2");
+const about3 = document.querySelector("#about3");
+
+document.addEventListener("scroll", () => {
+  const scrollSize = window.pageYOffset;
+  const aboutOffset = aboutSection.offsetTop;
+
+  if (scrollSize + window.innerHeight * 0.3 > aboutOffset) {
+    about1.classList.add("loaded");
+    setTimeout(() => {
+      about2.classList.add("loaded");
+    }, 600);
+    setTimeout(() => {
+      about3.classList.add("loaded");
+    }, 1200);
+  }
+});
+
+////////// ********** ABOUT ME END ********** //////////
