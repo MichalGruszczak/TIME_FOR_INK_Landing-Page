@@ -3,10 +3,12 @@
   height: 100vh;
   background-color: transparent;
   @include div-center;
+  border-bottom: 3px solid black;
 
   .inset__text {
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: 32px;
+    backdrop-filter: blur(5px);
   }
 }

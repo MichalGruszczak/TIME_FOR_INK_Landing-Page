@@ -5,6 +5,7 @@
   animation: homeBackground 30s infinite linear both;
   background-position: center;
   background-size: cover;
+  border-bottom: 3px solid black;
   color: white;
   overflow: hidden;
   display: grid;
@@ -86,7 +87,6 @@
       @include div-center;
       font-size: 40px;
       cursor: pointer;
-      // transition: background-color 0.5s linear;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.7);

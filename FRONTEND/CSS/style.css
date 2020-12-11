@@ -84,6 +84,7 @@
           animation: homeBackground 30s infinite linear both;
   background-position: center;
   background-size: cover;
+  border-bottom: 3px solid black;
   color: white;
   overflow: hidden;
   display: -ms-grid;
@@ -299,9 +300,13 @@
 }
 
 .about {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-color: lightgreen;
+  background-image: url("../img/Layout/aboutBG.jpg");
+  background-position: center;
+  background-size: 100%;
+  border-bottom: 3px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,6 +315,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: backgroundSize 15s infinite linear;
+          animation: backgroundSize 15s infinite linear;
+}
+
+.about .about__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .about .about__card {
@@ -317,8 +333,7 @@
   margin-top: 60px;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
-  height: 60%;
-  background-color: black;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,9 +346,28 @@
 }
 
 .about .about__card .about__picture {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
-  background-color: blue;
+  position: relative;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  padding: 0 auto;
+}
+
+.about .about__card .about__picture .about__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.about .about__card .about__text {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,30 +377,35 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.about .about__card .about__text {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  background-color: darkviolet;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-top: 15px;
+  padding-top: 10px;
+  border-radius: 5px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  color: white;
 }
 
 .about .about__card.loaded {
   -webkit-transition: 1.5s ease;
   transition: 1.5s ease;
   opacity: 1;
+}
+
+@-webkit-keyframes backgroundSize {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}
+
+@keyframes backgroundSize {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
 }
 
 .inset {
@@ -382,12 +421,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 3px solid black;
 }
 
 .inset .inset__text {
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 32px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .gallery {
@@ -403,6 +445,7 @@
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-bottom: 3px solid black;
 }
 
 .gallery .gallery__item {
@@ -542,6 +585,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 3px solid black;
 }
 
 .contact .contact__personal {
