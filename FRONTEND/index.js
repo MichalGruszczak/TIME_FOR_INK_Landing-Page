@@ -101,6 +101,27 @@ window.addEventListener("load", () => {
 
 ////////// ********** CONTACT START ********** //////////
 
+const contactPhoto = document.querySelector(".contact__img");
+const contactPhotoText = document.querySelector(".contact__img-text");
+const contactMail = document.querySelector(".contact__element-container.mail");
+const contactPhone = document.querySelector(".contact__element-container.phone");
+const contactFacebook = document.querySelector(".contact__element-container.facebook");
+const contactInstagram = document.querySelector(".contact__element-container.instagram");
+
+document.addEventListener("scroll", () => {
+  const scrollSize = window.pageYOffset;
+  const contactOffset = contactSection.offsetTop;
+
+  if (scrollSize + window.innerHeight * 0.3 > contactOffset) {
+    contactPhotoText.classList.add("loaded");
+    setTimeout(() => contactMail.classList.add("loaded"), 500);
+    setTimeout(() => contactPhone.classList.add("loaded"), 1000);
+    setTimeout(() => contactFacebook.classList.add("loaded"), 1500);
+    setTimeout(() => contactInstagram.classList.add("loaded"), 2000);
+    setTimeout(() => contactPhoto.classList.add("loaded"), 2500);
+  }
+});
+
 let emailValue = "";
 let titleValue = "";
 let textValue = "";
@@ -133,6 +154,8 @@ contactText.addEventListener("focus", () => {
 // SEND MESSAGE FUNCTIONS
 
 const sendEmail = () => {
+  contactFormContainer.innerHTML =
+    "<div class='lds-ring'><div></div><div></div><div></div><div></div></div>";
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "michal.gruszczak94@gmail.com",
@@ -151,15 +174,15 @@ const sendEmail = () => {
 contactFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!emailValue.length) {
-    contactEmailError.textContent = "Pole nie może pozostać puste.";
+    contactEmailError.innerHTML = "<p>Pole nie może pozostać puste.</p>";
   } else if (![...emailValue].includes("@")) {
-    contactEmailError.textContent = "Niepoprawny adres email";
+    contactEmailError.innerHTML = "<p>Niepoprawny adres email</p>";
   }
   if (!titleValue.length) {
-    contactTitleError.textContent = "Pole nie może pozostać puste.";
+    contactTitleError.innerHTML = "<p>Pole nie może pozostać puste.</p>";
   }
   if (!textValue.length) {
-    contactTextError.textContent = "Pole nie może pozostać puste.";
+    contactTextError.innerHTML = "<p>Pole nie może pozostać puste.</p>";
   }
 
   if (
@@ -171,6 +194,7 @@ contactFormBtn.addEventListener("click", (e) => {
     !contactTextError.textContent
   ) {
     console.log("Message sent!");
+
     sendEmail();
   }
 });
