@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ART by Peggy</title>
     <link href="./Libraries/lightbox/dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="./Libraries/font-awesome/css/all.min.css">
     
 </head>
 <body>
+
+   <!-- Site loader start -->
+   <div class='loading'>
+      <h1>LOGO</h1>
+      <div class="loading__spinner">
+         <div class='lds-ring'><div></div><div></div><div></div><div></div></div></div>
+      </div>
+   <!-- Site loader end -->
+
+
    <!-- Picture underneath start -->
 
    <div class="underneath">
@@ -46,15 +58,15 @@
 
     <section class="about">
       <div id='about1' class="about__card">
-         <div  class="about__picture"><img class='about__img' src="./img/Layout/about1.jpg" alt=""></div>
+         <div  class="about__picture"><img loading='lazy' class='about__img' src="./img/Layout/about1.jpg" alt=""></div>
          <span class="about__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui velit excepturi saepe vel sapiente eos autem aspernatur quo eius libero.</span>
       </div>
       <div id='about2' class="about__card">
-         <div class="about__picture"><img class='about__img' src="./img/Layout/about2.jpg" alt=""></div>
+         <div class="about__picture"><img loading='lazy' class='about__img' src="./img/Layout/about2.jpg" alt=""></div>
          <span class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut id ab dolor doloremque atque similique magnam voluptatem asperiores assumenda suscipit?</span>
       </div>
       <div id='about3' class="about__card">
-         <div class="about__picture"><img class='about__img' src="./img/Layout/about3.jpg" alt=""></div>
+         <div class="about__picture"><img loading='lazy' class='about__img' src="./img/Layout/about3.jpg" alt=""></div>
          <span class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error saepe fuga nobis recusandae est odit incidunt cupiditate praesentium ducimus!</span>
       </div>
     </section>
@@ -81,7 +93,7 @@
     <section class="contact">
       <div class="contact__personal">
          <div class="contact__picture-wrapper">
-            <div class="contact__img"><img src="./img/Layout/contact1.png" alt=""></div>
+            <div class="contact__img"><img loading='lazy' src="./img/Layout/contact1.png" alt=""></div>
             <div class="contact__img-text"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatem fuga culpa harum esse nisi vero cumque ipsam, odit repellat.</p></div>
          </div>
          <div class="contact__data-wrapper">

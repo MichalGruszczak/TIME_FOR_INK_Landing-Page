@@ -18,6 +18,8 @@ let contactEmailError = document.getElementById("contact__email-error");
 let contactTitleError = document.getElementById("contact__title-error");
 let contactTextError = document.getElementById("contact__text-error");
 
+const loader = document.querySelector(".loading");
+
 ////////// ********** GALLERY START ********** //////////
 
 const paintings = [
@@ -59,7 +61,7 @@ paintings.map((item) => {
   galleryItem.innerHTML = `
 <div class="gallery__item-img">
 <div class="gallery__item-img-container">
-   <a href=${item.mainImg} data-lightbox=${item.id}> <img class='gallery__img' src=${item.mainImg} alt="">
+   <a href=${item.mainImg} data-lightbox=${item.id}> <img loading='lazy' class='gallery__img' src=${item.mainImg} alt="">
    </a>
 </div>
 </div>
@@ -84,6 +86,7 @@ const homeFacebook = document.querySelector(".home__facebook");
 const homeInstagram = document.querySelector(".home__instagram");
 
 window.addEventListener("load", () => {
+  loader.classList.add("loaded");
   homeTitle.classList.add("loaded");
   setTimeout(() => {
     homeSubtitle.classList.add("loaded");
