@@ -4,26 +4,17 @@
   height: 100vh;
   background-image: url("../img/Layout/aboutBG.jpg");
   background-position: center;
-  background-size: 100%;
+  background-repeat: repeat;
   border-bottom: 3px solid black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  animation: backgroundSize 15s infinite linear;
-
-  .about__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: 100%;
-    width: 100%;
-    z-index: -1;
-  }
+  animation: backgroundSize 30s infinite linear;
 
   .about__card {
     opacity: 0;
     margin-top: 60px;
-    flex-basis: 25%;
+    flex-basis: 30%;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -31,27 +22,28 @@
 
     .about__picture {
       position: relative;
-      flex-basis: 85%;
+      background-repeat: no-repeat;
+      flex-basis: 70%;
       padding: 0 auto;
 
       .about__img {
         position: absolute;
         top: 50%;
         left: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
         transform: translate(-50%, -50%);
-        height: 100%;
         box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
       }
     }
 
     .about__text {
-      flex-basis: 15%;
-      backdrop-filter: blur(5px);
-      @include div-center;
-      padding-top: 10px;
+      flex-basis: 30%;
+      margin-top: 10px;
       border-radius: 5px;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color: white;
     }
   }
@@ -62,12 +54,38 @@
   }
 }
 
+@media (max-width: 749.98px) {
+  .about {
+    flex-direction: column;
+    height: 200vh;
+
+    .about__card {
+      margin-top: 0;
+
+      .about__picture {
+        flex-grow: 1;
+        flex-basis: 80%;
+      }
+
+      .about__text {
+        margin: auto 10px;
+        margin-top: 20px;
+        flex-basis: 20%;
+      }
+    }
+
+    .about__card:nth-child(1) {
+      margin-top: 65px;
+    }
+  }
+}
+
 @keyframes backgroundSize {
   0% {
-    background-size: 100%;
+    background-size: 40%;
   }
 
   100% {
-    background-size: 120%;
+    background-size: 60%;
   }
 }

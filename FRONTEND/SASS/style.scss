@@ -71,3 +71,15 @@ textarea {
   width: 0;
   height: 0;
 }
+
+@media (max-width: 639.98px) {
+  .loading {
+    h1 {
+      padding-bottom: 20%;
+    }
+
+    .loading__spinner {
+      padding-top: 20%;
+    }
+  }
+}

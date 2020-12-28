@@ -57,20 +57,24 @@ const paintings = [
 
 paintings.map((item) => {
   let galleryItem = document.createElement(`div`);
-  galleryItem.classList.add("gallery__item");
+  galleryItem.classList.add("gallery__card");
   galleryItem.innerHTML = `
-<div class="gallery__item-img">
-<div class="gallery__item-img-container">
-   <a href=${item.mainImg} data-lightbox=${item.id}> <img loading='lazy' class='gallery__img' src=${item.mainImg} alt="">
-   </a>
+<div class="gallery__picture">
+  <a class='gallery__a' href=${item.mainImg} data-lightbox=${item.id}>
+      <img class="gallery__img" src="${item.mainImg}" alt=""/>
+  </a>
 </div>
+<div class="gallery__more">
+  <button class="gallery__more-btn">
+  <a class='gallery__a-btn' href=${item.mainImg} data-lightbox=${item.id}>Więcej</a>
+  </button>
 </div>
-<div class="gallery__item-title"><h2>${item.title}</h2></div>
-<div class="gallery__item-description"><span>${item.description}</span></div>
-<a href=${item.img2} data-lightbox=${item.id}></a>
-<a href=${item.img3} data-lightbox=${item.id}></a>
-<a href=${item.img4} data-lightbox=${item.id}></a>
-<a href=${item.img5} data-lightbox=${item.id}></a>`;
+<h3 class="gallery__title">${item.title}</h3>
+<span class='gallery__description'>${item.description}</span>
+<a class='gallery__a-hidden' href=${item.img2} data-lightbox=${item.id}></a>
+<a class='gallery__a-hidden' href=${item.img3} data-lightbox=${item.id}></a>
+<a class='gallery__a-hidden' href=${item.img4} data-lightbox=${item.id}></a>
+<a class='gallery__a-hidden' href=${item.img5} data-lightbox=${item.id}></a>`;
 
   gallerySection.appendChild(galleryItem);
 });

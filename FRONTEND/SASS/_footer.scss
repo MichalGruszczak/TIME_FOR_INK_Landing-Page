@@ -1,9 +1,15 @@
 .footer {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 58px;
+  height: 65px;
   background-color: black;
   color: white;
   @include div-center;
+
+  .footer__logo {
+    display: none;
+  }
 
   .footer__dot {
     font-size: 50px;
@@ -17,6 +23,43 @@
       text-decoration: none;
       color: white;
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 699.98px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo field1"
+      "logo field2"
+      "logo field3";
+
+    .footer__logo {
+      grid-area: logo;
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .footer__dot {
+      display: none;
+    }
+
+    .footer__text {
+      padding-right: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 499.98px) {
+  .footer {
+    .footer__text {
+      font-size: 12px;
     }
   }
 }
