@@ -1,14 +1,11 @@
 .home {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/Layout/home1.jpg");
-  animation: homeBackground 30s infinite linear both;
-  background-position: center;
-  background-size: cover;
-  border-bottom: 3px solid black;
   color: white;
   overflow: hidden;
   display: grid;
+  border-bottom: 3px solid black;
   grid-template-columns: 1fr;
   grid-template-rows: 150px 1fr 0.5fr 1.5fr 1fr 1.5fr;
   grid-template-areas:
@@ -18,6 +15,20 @@
     "description"
     "social"
     "empty2";
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Layout/home1.jpg");
+    animation: homeBackground 30s infinite linear both;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(70%);
+  }
 
   .home__title {
     position: relative;

@@ -170,7 +170,15 @@ const sendEmail = () => {
     To: "michal.gruszczak94@gmail.com",
     From: `michal.gruszczak94@gmail.com`,
     Subject: `${titleValue}`,
-    Body: `${textValue}`,
+    // Email body
+    Body: (document.innerHTML = `
+      <h3 class='email__title'>Tytuł: </h3>
+      <span class="email__value">${titleValue}</span>
+      <h3 class='email__title'>Nadawca: </h3>
+      <span class="email__value">${emailValue}</span>
+      <h3 class='email__title'>Treść: </h3>
+      <span class="email__value">${textValue}</span>
+    `),
   }).then((message) => {
     console.log(message);
     contactFormContainer.innerHTML = "<h2>Wiadomość wysłana</h2>";

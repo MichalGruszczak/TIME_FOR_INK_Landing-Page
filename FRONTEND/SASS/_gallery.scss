@@ -47,7 +47,7 @@
           transition: 0.1s linear;
 
           &:hover {
-            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.75));
           }
         }
       }
