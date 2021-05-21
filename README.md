@@ -1,5 +1,5 @@
 DEMO
 
-https://patton94.github.io/Time-for-Ink_Landing-Page/
+https://patton94.github.io/TIME_FOR_INK_Landing-Page/
 
 Javascript, CSS, HTML, Lightbox, smtpJS.
